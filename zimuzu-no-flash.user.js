@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name          zimuzu.tv 免 Flash 复制
-// @version       0.1
+// @version       0.2
 // @namespace     stormyyd
 // @description   免 Flash 在 zimuzu.tv 上进行批量复制
 // @license       WTFPL
 // @supportURL    storm-yyd@outlook.com
+// @grant GM_setClipboard
 // @include       http://www.zimuzu.tv/*
 // @include       http://zimuzu.tv/*
 // ==/UserScript==
@@ -26,8 +27,9 @@ $(ed2k).click(function(){
             url = $(this).siblings("div.fr").children("a[type='ed2k']").attr("href");
             urls += url + "\n";
         }
-    })
-    $("div.box.download-box").append("<textarea id='UserScript' style='height: 200px; width: 100%;'>" + urls + "</textarea>");
+    });
+    GM_setClipboard(urls);
+    alert("下载链接已复制到剪贴板");
 });
 
 $(magnet).click(function(){
@@ -38,8 +40,9 @@ $(magnet).click(function(){
             url = $(this).siblings("div.fr").children("a[type='magnet']").attr("href");
             urls += url + "\n";
         }
-    })
-    $("div.box.download-box").append("<textarea id='UserScript' style='height: 200px; width: 100%;'>" + urls + "</textarea>");
+    });
+    GM_setClipboard(urls);
+    alert("下载链接已复制到剪贴板");
 });
 
 $(disk).click(function(){
@@ -50,6 +53,7 @@ $(disk).click(function(){
             url = $(this).siblings("div.fr").children("a[type='disk']").attr("href");
             urls += url + "\n";
         }
-    })
-    $("div.box.download-box").append("<textarea id='UserScript' style='height: 200px; width: 100%;'>" + urls + "</textarea>");
+    });
+    GM_setClipboard(urls);
+    alert("下载链接已复制到剪贴板");
 });
