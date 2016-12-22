@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name          zimuzu.tv 免 Flash 复制
-// @version       0.3
+// @version       0.3.1
 // @namespace     stormyyd
 // @description   免 Flash 在 zimuzu.tv 上进行批量复制
 // @license       WTFPL
 // @supportURL    storm-yyd@outlook.com
 // @grant         GM_setClipboard
-// @include       http://www.zimuzu.tv/*
-// @include       http://zimuzu.tv/*
+// @include       http://www.zimuzu.tv/gresource/list/*
 // ==/UserScript==
 
 var ed2k = $("a[rel='ed2k']");
@@ -29,7 +28,7 @@ var getUrl = function(urlType){
     });
     urls = urls.slice(0, -1);
     GM_setClipboard(urls);
-    alert("下载链接已复制到剪贴板");
+    GLOBAL.ShowMsg("已将链接复制到剪贴板");
 };
 
 $(ed2k).click(function(){
