@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name          字幕组（原 人人影视） 免 Flash 复制
-// @version       0.3.3
+// @version       0.3.4
 // @namespace     stormyyd
 // @description   免 Flash 在 字幕组（原 人人影视） 上进行批量复制
 // @license       WTFPL
 // @supportURL    storm-yyd@outlook.com
 // @grant         GM_setClipboard
-// @include       http://www.zmz2017.com/resource/list/*
+// @include       http://www.zimuzu.tv/resource/list/*
 // ==/UserScript==
 
 var ed2k = $("a[rel='ed2k']");
